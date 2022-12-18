@@ -27,7 +27,7 @@ function Form() {
             tc+=+Data[i].CreditAmount
             td+=+Data[i].DebitAmount 
         }
-        console.log(tc,td);
+        // console.log(tc,td);
         settotalDebit(td)
         settotalCredit(tc) 
        
