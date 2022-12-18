@@ -37,8 +37,7 @@ function Form() {
     <div >
         <form onSubmit={(e)=>{handelsubmitt(e)}} className='form_contaner'>
             <div>
-            {/* <label ></label> */}
-            <label>Account : </lable>
+            <label >Account : </label >
             <select value = {Account}
             className='form_selectoc'
                     onChange ={(e)=>setAccount(e.target.value)}
@@ -51,11 +50,11 @@ function Form() {
             </select>
             </div>
             <div>
-                <lable>DebitAmount : </lable>
+                <label>DebitAmount : </label>
                 <input type='number' value={DebitAmount} onChange={(e)=>{setDebitAmount(e.target.value)}}/>
             </div>
             <div>
-                <lable>CreditAmount : </lable>
+                <label>CreditAmount : </label  >
                 <input type='number' value={CreditAmount} onChange={(e)=>{setCreditAmount(e.target.value)}}/>
             </div>
             <button type='submit'><SiAddthis/></button>
