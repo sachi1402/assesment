@@ -37,7 +37,8 @@ function Form() {
     <div >
         <form onSubmit={(e)=>{handelsubmitt(e)}} className='form_contaner'>
             <div>
-            <lable>Account : </lable>
+            {/* <label ></label> */}
+            <label>Account : </lable>
             <select value = {Account}
             className='form_selectoc'
                     onChange ={(e)=>setAccount(e.target.value)}
