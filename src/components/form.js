@@ -61,17 +61,19 @@ function Form() {
         </form>
        
     </div>
-    <div className="list" >
-        {Data.map(e=>
-        <div  key={e.id} className="list_item">
-        <div>{+e.id+1}</div>
-        <div>{e.Account}</div>
-        <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.CreditAmount)}</div>
-        <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.DebitAmount)}</div>
-        {/* <p>  __ {+e.DebitAmount}</p> */}
-        <button onClick={event=>deletehaldler(e)} ><RiDeleteBinFill/></button>
-        </div >
+    <div className="list_con">
+        <div className="list" >
+            {Data.map(e=>
+            <div  key={e.id} className="list_item">
+            <div>{+e.id+1}</div>
+            <div>{e.Account}</div>
+            <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.CreditAmount)}</div>
+            <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.DebitAmount)}</div>
+            {/* <p>  __ {+e.DebitAmount}</p> */}
+            <button onClick={event=>deletehaldler(e)} ><RiDeleteBinFill/></button>
+            </div >
         )}
+        </div>
     </div>
     <div className="totla">
         <div className="tcd">Total CreditAmount= <b>₹{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalCredit)}</b></div>

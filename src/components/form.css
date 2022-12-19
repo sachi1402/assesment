@@ -60,15 +60,32 @@ input {
     justify-content: center;
     align-items:center;
 }
+.list_con{
+    /* background-color:red; */
+    height:600px;
+    /* padding-top: 10px; */
+    overflow: hidden;
+    box-sizing: border-box;
+}
 .list{
-    justify-content: center;
-    align-items:center;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height:50vh;
+    justify-content: flex-start;
+    align-items:center;
+    /* background-color: red; */
+    /* padding:100px; */
+    height:100%;
     width: 100vw;
+    position:relative;
+    overflow:auto;
+    overflow-y: scroll ;
+    /* padding-top:100px; */
+    /* margin-top:20px; */
+    /* background-color: red; */
 }
 .list_item{
+    box-sizing: border-box;
     background-color: aliceblue;
     width: 80%;
     display: flex;
@@ -77,8 +94,14 @@ input {
     padding: 15px;
     margin: 2px;
     font-size: 20px;
+    height:50px;
     color: rgb(45, 39, 39);
     border-radius:5px;
+    /* margin-top: 20px; */
+    z-index: 1;
+    /* padding-top:20px;    */
+    /* overflow-y: scroll; */
+    
 
 }
 .list_item > div{
