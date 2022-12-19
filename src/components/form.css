@@ -49,6 +49,7 @@ input {
     padding:5px;
     background-color:#ffffff;
     justify-content:center;
+    cursor: pointer;
   }
  
 .form_selectoc{
@@ -86,6 +87,13 @@ input {
     align-items: left;
     text-align: left;
     padding:0  10px;
+}
+.list_item > button{
+    padding:0;
+    border: none;
+    color: rgb(246, 32, 32);
+    font-size:20px;
+    cursor:pointer;
 }
 .totla{
     font-size:20px;

@@ -42,10 +42,10 @@ function Form() {
             className='form_selectoc'
                     onChange ={(e)=>setAccount(e.target.value)}
             >
-                <option value='jon'>user1</option>
-                <option value='samantha'>user2</option>
-                <option value='rahul'>user3</option>
-                <option value='vivek'>user4</option>
+                <option value='jon'>jon</option>
+                <option value='samantha'>samantha</option>
+                <option value='rahul'>rahul</option>
+                <option value='vivek'>vivek</option>
 
             </select>
             </div>
@@ -57,7 +57,7 @@ function Form() {
                 <label>CreditAmount : </label  >
                 <input type='number' value={CreditAmount} onChange={(e)=>{setCreditAmount(e.target.value)}}/>
             </div>
-            <button type='submit'><SiAddthis/></button>
+            <button type='submit'><SiAddthis /></button>
         </form>
        
     </div>
@@ -66,17 +66,18 @@ function Form() {
         <div  key={e.id} className="list_item">
         <div>{+e.id+1}</div>
         <div>{e.Account}</div>
-        <div>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.CreditAmount)}₹</div>
-        <div>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.DebitAmount)}₹</div>
+        <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.CreditAmount)}</div>
+        <div><sup>₹</sup>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(+e.DebitAmount)}</div>
         {/* <p>  __ {+e.DebitAmount}</p> */}
         <button onClick={event=>deletehaldler(e)} ><RiDeleteBinFill/></button>
         </div >
         )}
     </div>
     <div className="totla">
-        <div className="tcd">Total CreditAmount= <b>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalCredit)}₹</b></div>
-        <div className="tdb">Total DebitAmount= <b>{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalDebit)}₹</b></div>
+        <div className="tcd">Total CreditAmount= <b>₹{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalCredit)}</b></div>
+        <div className="tdb">Total DebitAmount= <b>₹{Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(totalDebit)}</b></div>
     </div>
+    
 </div>
   )
 }
